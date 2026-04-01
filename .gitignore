@@ -16,6 +16,12 @@ Thumbs.db
 *.src.js
 *.src.css
 
+# Build artifacts
+node_modules/
+package.json
+package-lock.json
+tailwind.config.js
+
 # Misc
 *.zip
 .vercel
