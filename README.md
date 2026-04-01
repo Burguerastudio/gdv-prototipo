@@ -20,37 +20,37 @@ El prototipo incluye 5 pantallas navegables con interacciones, animaciones y un 
 
 ## Stack
 
-- **HTML5** — paginas estaticas multi-page
-- **Tailwind CSS v3** — via CDN
-- **Vanilla JavaScript** (ES6+) — sin dependencias
-- **CSS custom properties** — design tokens y tematizacion dinamica
+- **HTML5** — paginas estaticas multi-page, minificadas
+- **Tailwind CSS v3** — pre-built (15KB), no CDN
+- **Vanilla JavaScript** (ES6+) — minificado con terser
+- **CSS custom properties** — design tokens y tematizacion dinamica por arquetipo
 - **Lenis** — smooth scroll (via CDN)
-- **Web Audio API** — efectos de sonido metalicos
+- **Web Audio API** — efectos de sonido metalicos sintetizados
 
-Sin framework, sin build tools, sin npm. Abrir cualquier HTML directamente en el navegador.
+Sin framework. Abrir cualquier HTML directamente en el navegador.
 
 ## Sistema de personalizacion
 
-El prototipo incluye un **selector flotante** (boton en esquina inferior derecha) que permite cambiar en tiempo real:
+El prototipo incluye un **selector flotante** (boton en esquina inferior derecha) que permite configurar:
 
 - **Arquetipo** (4): Dominus (verde), Structor (dorado), Invictus (naranja), Nexus (azul)
 - **Personaje** (6): Servus, Ventas, Veteranus, Orator, Lanista, Imperator
 - **Modulo activo** (1-8): cambia el estado de progreso en toda la app
 
-Todos los colores, glows, bordes, iconos y contenido se adaptan dinamicamente.
+Selecciona las opciones y pulsa **"Aplicar Cambios"** para recargar con la nueva configuracion.
 
 ## Sistema de gamificacion
 
 - **4 arquetipos** con colores, fortalezas y retos unicos
-- **8 batallas** secuenciales con progresion y XP
-- **6 personajes** seleccionables con avatares de cuerpo completo
-- **Sistema de rareza** en armas: Comun, Raro, Epico, Legendario
-- **Leaderboard** comunitario
-- **Barra de XP** dinamica segun modulo
+- **8 batallas** secuenciales con progresion y barra de XP
+- **6 personajes** seleccionables con avatares y figuras de cuerpo completo
+- **Sistema de rareza** en armas: Comun (gris), Raro (verde), Epico (purpura), Legendario (dorado)
+- **Leaderboard** comunitario con avatares unicos
+- **Marcos RPG** ornamentados con diamantes, esquinas y filigranas
 
 ## Interacciones
 
-- Marcos RPG ornamentados con diamantes, esquinas decorativas y glows
+- Marcos de carta RPG con ornamentos, diamantes y patron de grabado
 - Particulas flotantes (cenizas/brasas) con color del arquetipo
 - Parallax en heroes al mover el raton
 - Bandera interactiva con animacion de ondeo
@@ -65,25 +65,26 @@ Todos los colores, glows, bordes, iconos y contenido se adaptan dinamicamente.
 
 - **Desktop** (>1280px): diseno completo con sidebar, flag banner, ornamentos
 - **Laptop** (1025-1280px): paddings reducidos
-- **Tablet** (769-1024px): tab bar centrada, columnas adaptadas
+- **Tablet** (769-1024px): tab bar centrada, columnas adaptadas, sidebar oculta
 - **Mobile** (<=768px): tab bar inferior, header minimo, cards full-width, journey map en grid
 
 ## Estructura
 
 ```
-index.html          Pagina principal (Dashboard)
-player.html         Perfil del gladiador
-modulos.html        Modulos / batallas
-armeria.html        Armeria de entrenamientos
-coliseo.html        Comunidad y leaderboard
+index.html              Pagina principal (Dashboard)
+player.html             Perfil del gladiador
+modulos.html            Modulos / batallas
+armeria.html            Armeria de entrenamientos
+coliseo.html            Comunidad y leaderboard
 
-css/styles.css      Estilos globales, tokens, animaciones, responsive
-js/main.js          Interacciones, particulas, sonidos, parallax
-js/onboarding.js    Tour guiado de 17 pasos
-js/module-selector.js  Selector de arquetipos, personajes y modulos
+css/styles.css          Estilos minificados
+css/tailwind.min.css    Tailwind pre-built (solo clases usadas)
+js/main.js              Interacciones, particulas, sonidos, parallax (minificado)
+js/module-selector.js   Selector de arquetipos, personajes y modulos (minificado)
+js/onboarding.js        Tour guiado de 17 pasos (minificado)
 
-img/                Assets (SVG, WebP, PNG, JPG)
-fonts/              Heroes Legend (tipografia custom)
+img/                    Assets optimizados (WebP, SVG)
+fonts/                  Heroes Legend (WOFF2 + TTF)
 ```
 
 ## Paleta de colores
@@ -96,13 +97,17 @@ fonts/              Heroes Legend (tipografia custom)
 | Structor | `#ffc42e` (dorado) |
 | Invictus | `#f97316` (naranja) |
 | Nexus | `#60a5fa` (azul) |
+| Raro | `#75e21c` (verde) |
+| Epico | `#9e58f5` (purpura) |
+| Legendario | `#ffc42e` (dorado) |
 
 ## Como usar
 
 1. Clonar el repositorio
 2. Abrir `index.html` en el navegador
 3. Usar el boton flotante (esquina inferior derecha) para cambiar arquetipos, personajes y modulos
-4. Navegar entre las 5 pantallas
+4. Pulsar "Aplicar Cambios" para ver la nueva configuracion
+5. Navegar entre las 5 pantallas
 
 No requiere servidor, build ni instalacion.
 
@@ -110,5 +115,5 @@ No requiere servidor, build ni instalacion.
 
 - Es un prototipo visual, no hay logica de negocio real
 - Los datos son estaticos (no hay backend)
-- Las imagenes de personajes son assets de alta resolucion (algunos >3MB)
 - El tour de onboarding se muestra automaticamente la primera vez; se puede reiniciar desde el footer
+- Los archivos fuente (*.src.js, styles.src.css) no se incluyen en el deploy
