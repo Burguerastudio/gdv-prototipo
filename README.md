@@ -2,9 +2,11 @@
 
 Prototipo interactivo de frontend para una academia de ventas gamificada con narrativa de gladiadores romanos. Diseñado para presentar la experiencia completa del producto antes del desarrollo.
 
-## Vista previa
+## Demo en vivo
 
-El prototipo incluye 5 pantallas navegables con interacciones, animaciones y un sistema de personalización completo.
+**https://gdv-sepia.vercel.app**
+
+El prototipo incluye 5 pantallas navegables con interacciones, animaciones y un sistema de personalizacion completo.
 
 ## Pantallas
 
