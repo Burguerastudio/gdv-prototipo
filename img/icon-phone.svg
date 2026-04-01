@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#75e21c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Megaphone / war horn — calls made -->
+  <path d="M18 3v18"/>
+  <path d="M18 3l-8 4v8l8 4"/>
+  <path d="M10 7H6a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4"/>
+  <path d="M6 19l2-4"/>
+</svg>
